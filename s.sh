@@ -1,7 +1,7 @@
 #!/bin/sh
 # Author: Brian Gershon, 3/8/13
 # 
-# Do a smart DVCS 'status' depending on if you're in a git, mercurial or subversion repository
+# Do a smart VCS working directory 'status' depending on if you're in a git, mercurial or subversion repository
 # 
 
 clear
