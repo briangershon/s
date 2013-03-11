@@ -7,19 +7,22 @@
 
 clear
 
-if `git rev-parse 2> /dev/null`; then
+git rev-parse 2> /dev/null
+if [ $? -eq 0 ]; then
 	echo "---\nGit Repository Status\n---\n"
 	git status
 	exit
 fi
 
-if `hg -q stat 2> /dev/null`; then
+hg -q stat 1> /dev/null 2> /dev/null
+if [ $? -eq 0 ]; then
 	echo "---\nMercurial Repository Status\n("`hg id`")\n---\n"
 	hg status
 	exit
 fi
 
-if `svn info 1> /dev/null 2> /dev/null`; then
+svn info 1> /dev/null 2> /dev/null
+if [ $? -eq 0 ]; then
 	echo "---\nSubversion Repository Status\n("`svn info | grep '^URL' | awk '{print $NF}'`")\n---\n"
 	svn st
 	exit
