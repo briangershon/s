@@ -1,8 +1,8 @@
 # s
 
-A smart 'status' that supports git, mercurial or subversion repository.
+A smart 'status' shell command that supports git, mercurial or subversion repositories.
 
-Just type `s` in any git, mercurial or svn repo to get its status.
+Just type `s` on the command-line in any repo to get its status.
 
 ## How to setup
 
